@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Стартовый шаблон</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+  <body>
+
+    <div style="display: none">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
+    <header class="page-header">
+      <div class="page-header__wrapper page-header__wrapper--no-js">
+        <a class="page-header__logo">
+          <svg class="page-header__image" width="70" height="38">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+        <button class="page-header__toggle" type="button" aria-label="Открыть меню"></button>
+        <nav class="page-header__nav main-nav main-nav--no-js">
+          <ul class="main-nav__list">
+            <li>
+              <a class="main-nav__item" href="#advantages">Преимущества</a>
+            </li>
+            <li>
+              <a class="main-nav__item" href="#">Направления</a>
+            </li>
+            <li>
+              <a class="main-nav__item" href="#cruises">Ближайшие круизы</a>
+            </li>
+            <li>
+              <a class="main-nav__item" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page-header__intro intro">
+        <h1 class="intro__title">Круизы в Антарктику</h1>
+        <p class="intro__text">
+          Волшебный мир айсбергов и пингвинов
+        </p>
+      </div>
+    </header>
+
+    <main class="page-main">
+    </main>
+
+    <footer class="page-footer">
+
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

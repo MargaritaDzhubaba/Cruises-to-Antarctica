@@ -1,0 +1,152 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  // padding: 35px 0;
+
+  background-color: #0b4077;
+  background-image: url("../img/bg-intro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-header__wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  @include wrapper;
+
+  padding: 35px 0;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-header__image {
+  fill: $main-color;
+}
+
+.page-header__toggle {
+  display: none;
+}
+
+.page-header__nav {
+  margin-left: auto;
+}
+
+.page-header__intro {
+  @include wrapper;
+}
+
+@media (max-width: $tablet-width-only) {
+  .page-header__wrapper {
+    padding: 30px 0;
+
+    &--no-js .page-header__toggle {
+      display: none;
+    }
+
+    &--close .page-header__nav {
+      display: none;
+    }
+
+    &--open .page-header__toggle {
+      background-color: transparent;
+      background-image: url("../img/icon-close-white.svg");
+      background-position: 25px 14px;
+    }
+  }
+
+  .page-header__image {
+    width: 38px;
+    height: auto;
+  }
+
+  .page-header__toggle {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    z-index: 6;
+
+    width: 24px;
+    height: 12px;
+
+    background-color: transparent;
+    background-image: url("../../img/icon-menu-white.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    padding: 20px 15px;
+
+    color: $accent-color;
+    background-color: $background-color;
+
+    &--no-js .page-header__toggle {
+      display: none;
+    }
+
+    &--close .page-header__nav {
+      display: none;
+    }
+
+    &--open .page-header__toggle {
+      background-color: transparent;
+      background-image: url("../img/icon-close-blue.svg");
+      background-position: 25px 14px;
+    }
+  }
+
+  .page-header__logo {
+    margin-bottom: 50px;
+  }
+
+  .page-header__image {
+    width: 42px;
+    height: auto;
+
+    fill: $accent-color;
+  }
+
+  .page-header__toggle {
+    top: 25px;
+    right: 15px;
+
+    width: 24px;
+    height: 22px;
+
+    background-color: transparent;
+    background-image: url("../../img/icon-menu-blue.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    cursor: pointer;
+  }
+
+  .page-header__nav {
+    margin: 0;
+  }
+}
