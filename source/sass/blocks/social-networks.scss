@@ -1,0 +1,33 @@
+.social-networks__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social-networks__item {
+  margin-left: 33px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .social-networks__item {
+    margin-left: 23px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .social-networks__item {
+    margin-left: 0;
+    margin-right: 23px;
+  }
+}
