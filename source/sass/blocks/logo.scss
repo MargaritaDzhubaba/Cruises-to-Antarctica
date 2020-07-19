@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.7;
+  }
+
+  &[href]:active {
+    opacity: 0.5;
+  }
+}
+
+.logo__image {
+  fill: $main-color;
+}
+
+@media (max-width: $tablet-width-only) {
+  .logo__image {
+    width: 38px;
+    height: auto;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .logo__image {
+    width: 42px;
+    height: auto;
+  }
+}
