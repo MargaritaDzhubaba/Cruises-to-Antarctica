@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-intro-2x.jpg");
+  }
 }
 
 .page-header__wrapper {
@@ -19,24 +23,6 @@
   @include wrapper;
 
   padding: 35px 0;
-}
-
-.page-header__logo {
-  display: flex;
-  align-items: center;
-
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-.page-header__image {
-  fill: $main-color;
 }
 
 .page-header__toggle {
@@ -52,8 +38,17 @@
 }
 
 @media (max-width: $tablet-width-only) {
+  .page-header {
+    background-image: url("../img/bg-intro-tablet.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-tablet-2x.jpg");
+    }
+  }
+
   .page-header__wrapper {
     padding: 30px 0;
+    margin: 0 auto;
 
     &--no-js .page-header__toggle {
       display: none;
@@ -70,11 +65,6 @@
     }
   }
 
-  .page-header__image {
-    width: 38px;
-    height: auto;
-  }
-
   .page-header__toggle {
     display: block;
     position: absolute;
@@ -86,7 +76,7 @@
     height: 12px;
 
     background-color: transparent;
-    background-image: url("../../img/icon-menu-white.svg");
+    background-image: url("../img/icon-menu-white.svg");
     background-repeat: no-repeat;
     background-position: center center;
     border: none;
@@ -95,6 +85,14 @@
 }
 
 @media (max-width: $mobile-width-only) {
+  .page-header {
+    background-image: url("../img/bg-intro-mobile.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-mobile-2x.jpg");
+    }
+  }
+
   .page-header__wrapper {
     flex-direction: column;
     align-items: flex-start;
@@ -122,13 +120,13 @@
 
   .page-header__logo {
     margin-bottom: 50px;
-  }
 
-  .page-header__image {
-    width: 42px;
-    height: auto;
+    .logo__image {
+      width: 42px;
+      height: auto;
 
-    fill: $accent-color;
+      fill: $accent-color;
+    }
   }
 
   .page-header__toggle {
