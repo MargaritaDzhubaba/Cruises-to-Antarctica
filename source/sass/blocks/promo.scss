@@ -1,0 +1,87 @@
+.promo {
+  @include wrapper;
+
+  display: flex;
+  flex-direction: column;
+  // padding: 120px 0;
+  padding: 186px 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+
+  color: $accent-color;
+
+  background-color: $main-color;
+  background-image: url("../img/penguins.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/penguins-2x.jpg");
+    background-size: 50%;
+  }
+}
+
+.promo__container {
+  width: 520px;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+}
+
+.promo__text {
+  margin: 0;
+}
+
+@media (max-width: $tablet-width-only) {
+  .promo {
+    padding: 100px 0;
+
+    background-image: url("../img/penguins-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/penguins-tablet-2x.jpg");
+      background-size: 50%;
+    }
+  }
+
+  .promo__container {
+    width: 325px;
+  }
+
+  .promo__title {
+    margin-bottom: 30px;
+
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .promo {
+    padding: 65px 0 291px;
+
+    background-image: url("../img/penguins-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center 89.84%;
+    background-size: auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/penguins-mobile-2x.jpg");
+      background-size: contain;
+    }
+  }
+
+  .promo__container {
+    width: auto;
+  }
+}
