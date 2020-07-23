@@ -1,15 +1,62 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+var ESC_KEY = 'Escape';
+var ENTER_KEY = 'Enter';
 
-pageHeader.classList.remove('page-header--nojs');
+var pageHeader = document.querySelector('.page-header__wrapper');
+var headerToggle = document.querySelector('.page-header__toggle');
+var nav = document.querySelector('.main-nav');
+var navItems = document.querySelectorAll('.main-nav__item');
+
+pageHeader.classList.remove('page-header__wrapper--no-js');
+nav.classList.remove('main-nav--no-js');
+nav.classList.add('main-nav--js');
+
+var onMenuEscPress = function (evt) {
+  if (evt.key === ESC_KEY) {
+    hideMenu();
+  }
+};
+
+var showMenu = function () {
+  pageHeader.classList.add('page-header__wrapper--close');
+  nav.classList.add('main-nav--js');
+  document.addEventListener('keydown', onMenuEscPress);
+};
+
+var hideMenu = function () {
+  pageHeader.classList.remove('page-header__wrapper--open');
+  pageHeader.classList.add('page-header__wrapper--close');
+  document.removeEventListener('keydown', onMenuEscPress);
+};
 
 headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
+  if (pageHeader.classList.contains('page-header__wrapper--close')) {
+    pageHeader.classList.remove('page-header__wrapper--close');
+    pageHeader.classList.add('page-header__wrapper--open');
   } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+    pageHeader.classList.add('page-header__wrapper--close');
+    pageHeader.classList.remove('page-header__wrapper--open');
   }
+});
+
+headerToggle.addEventListener('keydown', function (evt) {
+  if (pageHeader.classList.contains('page-header__wrapper--close')) {
+    if (evt.key === ENTER_KEY) {
+      showMenu();
+    }
+  } else if (pageHeader.classList.contains('page-header__wrapper--open')) {
+    if (evt.key === ENTER_KEY) {
+      hideMenu();
+    }
+  }
+});
+
+navItems.forEach(function (e) {
+  e.addEventListener('click', function () {
+    hideMenu();
+  });
+});
+
+nav.addEventListener('click', function () {
+  hideMenu();
 });
