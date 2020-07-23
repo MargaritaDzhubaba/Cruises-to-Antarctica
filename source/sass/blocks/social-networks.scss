@@ -23,6 +23,21 @@
   .social-networks__item {
     margin-left: 23px;
   }
+
+  .social-networks__icon--fb {
+    width: 9px;
+    height: 16px;
+  }
+
+  .social-networks__icon--insta {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social-networks__icon--tw {
+    width: 16px;
+    height: 13px;
+  }
 }
 
 @media (max-width: $mobile-width-only) {

@@ -1,0 +1,156 @@
+.booking {
+  background-color: #e2f5fc;
+  background-image: url("../img/bg-booking.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-booking-2x.jpg");
+  }
+}
+
+.booking__wrapper {
+  @include wrapper;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 50px 60px;
+}
+
+.booking__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 493px;
+  padding-top: 163px;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: normal;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+    width: 350px;
+  }
+}
+
+.booking__container {
+  display: flex;
+  flex-direction: column;
+
+  width: 403px;
+  min-height: 455px;
+  padding: 50px;
+  padding-top: 44px;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+
+  color: $main-color;
+  background-color: $accent-color;
+
+  p {
+    margin: 0;
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .booking {
+    background-image: url("../img/bg-booking-tablet.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-booking-tablet-2x.jpg");
+    }
+  }
+
+  .booking__wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 88px 0 100px;
+  }
+
+  .booking__description {
+    width: 419px;
+
+    align-items: center;
+
+    margin-bottom: 52px;
+    padding-top: 0;
+
+    h2 {
+      margin-bottom: 5px;
+
+      font-size: 34px;
+      line-height: 51px;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .booking__container {
+    width: 403px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .booking {
+    background-image: url("../img/bg-booking-mobile.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-booking-mobile-2x.jpg");
+    }
+  }
+
+  .booking__wrapper {
+    padding: 60px 0 65px;
+  }
+
+  .booking__description {
+    width: 100%;
+    margin-bottom: 34px;
+
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 13px;
+
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .booking__container {
+    width: 100%;
+
+    padding: 35px 30px 40px;
+    line-height: 25px;
+    text-align: center;
+
+    p {
+      margin-bottom: 27px;
+    }
+  }
+}

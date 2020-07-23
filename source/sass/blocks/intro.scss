@@ -1,6 +1,5 @@
 .intro {
-  // padding: 210px 0 248px 198px;
-  padding: 175px 0 283px 198px;
+  padding: 162px 95px 278px;
 
   font-weight: normal;
   font-size: 20px;
@@ -11,9 +10,9 @@
 
 .intro__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
-  font-weight: bold;
+  font-weight: 700;
   font-size: 54px;
   line-height: 66px;
 }
@@ -24,7 +23,7 @@
 
 @media (max-width: $tablet-width-only) {
   .intro {
-    padding: 200px 0 280px 45px;
+    padding: 187px 0 275px;
 
     font-size: 18px;
     line-height: 22px;
@@ -38,7 +37,7 @@
 
 @media (max-width: $mobile-width-only) {
   .intro {
-    padding: 110px 0 185px;
+    padding: 113px 0 178px;
 
     font-size: 16px;
     line-height: 22px;

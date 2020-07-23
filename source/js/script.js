@@ -33,9 +33,11 @@ headerToggle.addEventListener('click', function () {
   if (pageHeader.classList.contains('page-header__wrapper--close')) {
     pageHeader.classList.remove('page-header__wrapper--close');
     pageHeader.classList.add('page-header__wrapper--open');
+    document.addEventListener('keydown', onMenuEscPress);
   } else {
     pageHeader.classList.add('page-header__wrapper--close');
     pageHeader.classList.remove('page-header__wrapper--open');
+    document.removeEventListener('keydown', onMenuEscPress);
   }
 });
 

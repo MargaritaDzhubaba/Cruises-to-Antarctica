@@ -31,11 +31,11 @@
 
 @media (max-width: $tablet-width-only) {
   .page-footer__wrapper {
-    padding: 50px 0;
+    padding: 49px 0 50px;
   }
 
-  .social-networks__item {
-    margin-left: 23px;
+  .page-footer__logo {
+    margin-right: 25px;
   }
 }
 
@@ -49,7 +49,7 @@
 
   .page-footer__logo {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   .page-footer__nav {

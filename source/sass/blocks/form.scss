@@ -1,0 +1,145 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__wrapper {
+  width: 100%;
+}
+
+.form__wrapper input {
+  width: 100%;
+
+  padding: 12px 15px 10px;
+  margin-bottom: 18px;
+
+  font-size: 14px;
+  line-height: 21px;
+
+  color: $accent-color;
+  border: none;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::placeholder {
+    font-family: $font-deafult;
+    font-style: normal;
+    font-weight: normal;
+
+    color: $accent-color;
+    opacity: 1;
+
+    :-ms-input-placeholder { /* IE 10+ */
+      color: $accent-color;
+    }
+  }
+
+  &:invalid {
+    border: 1px solid red;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: inner 1px solid $light-blue-color;
+  }
+}
+
+.form__wrapper--checkbox {
+  margin-top: 21px;
+}
+
+.form__wrapper--checkbox label {
+  position: relative;
+  display: block;
+
+  padding-left: 23px;
+  margin-bottom: 33px;
+
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: normal;
+
+  cursor: pointer;
+}
+
+.check-input + .check-label::before {
+  position: absolute;
+
+  content: "";
+  top: -2px;
+  left: 0;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: $main-color;
+}
+
+.check-input:checked + .check-label::after {
+  position: absolute;
+
+  content: "";
+  top: 3px;
+  left: 3px;
+
+  width: 12px;
+  height: 8px;
+
+  background: url("../img/icon-checkbox-tick.svg") no-repeat 0 0;
+}
+
+.check-input:hover + .check-label::before {
+  background-color: $light-blue-color;
+}
+
+.check-input:focus + .check-label::before {
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.check-input:active + .check-label::before {
+  background-color: $light-blue-color;
+}
+
+.check-input:checked:active + .check-label::after {
+  opacity: 0.3;
+}
+
+.form__button {
+  width: 100%;
+  padding: 11px 15px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .form__wrapper--checkbox {
+    margin-top: 16px;
+
+    label {
+      min-width: 190px;
+      padding-left: 28px;
+      margin-bottom: 27px;
+
+      text-align: left;
+    }
+  }
+
+  .check-input + .check-label::before {
+    top: 3px;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  .check-input:checked + .check-label::after {
+    top: 7px;
+    left: 5px;
+
+    width: 12px;
+    height: 8px;
+  }
+}

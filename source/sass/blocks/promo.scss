@@ -1,10 +1,12 @@
 .promo {
   @include wrapper;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  // padding: 120px 0;
-  padding: 186px 0;
+
+  padding: 176px 0 179px;
 
   font-size: 16px;
   line-height: 24px;
@@ -12,76 +14,107 @@
 
   color: $accent-color;
 
-  background-color: $main-color;
-  background-image: url("../img/penguins.jpg");
-  background-repeat: no-repeat;
-  background-position: right;
+  &::before {
+    content: "";
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/penguins-2x.jpg");
-    background-size: 50%;
+    position: absolute;
+    top: 120px;
+    right: 0;
+
+    width: 556px;
+    height: 301px;
+
+    background-color: $main-color;
+    background-image: url("../img/penguins.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/penguins-2x.jpg");
+    }
   }
 }
 
 .promo__container {
   width: 520px;
-}
 
-.promo__title {
-  margin: 0;
-  margin-bottom: 40px;
+  h2 {
+    margin: 0;
+    margin-bottom: 24px;
 
-  font-size: 28px;
-  line-height: 42px;
-  font-weight: 600;
-}
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+  }
 
-.promo__text {
-  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
 @media (max-width: $tablet-width-only) {
   .promo {
-    padding: 100px 0;
+    padding: 91px 0 93px;
 
-    background-image: url("../img/penguins-tablet.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
+    &::before {
+      content: "";
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/penguins-tablet-2x.jpg");
-      background-size: 50%;
+      position: absolute;
+      top: 100px;
+      right: 0;
+
+      width: 324px;
+      height: 264px;
+
+      background-image: url("../img/penguins-tablet.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/penguins-tablet-2x.jpg");
+      }
     }
   }
 
   .promo__container {
     width: 325px;
-  }
 
-  .promo__title {
-    margin-bottom: 30px;
+    h2 {
+      margin-bottom: 16px;
 
-    font-size: 26px;
-    line-height: 36px;
+      font-size: 26px;
+      line-height: 36px;
+    }
   }
 }
 
 @media (max-width: $mobile-width-only) {
   .promo {
-    padding: 65px 0 291px;
+    padding: 57px 0 283px;
 
-    background-image: url("../img/penguins-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: center 89.84%;
-    background-size: auto;
+    &::before {
+      content: "";
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/penguins-mobile-2x.jpg");
-      background-size: contain;
+      position: absolute;
+      top: 389px;
+      right: 0;
+
+      width: 290px;
+      height: 186px;
+
+      background-image: url("../img/penguins-mobile.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/penguins-mobile-2x.jpg");
+      }
     }
   }
 
   .promo__container {
     width: auto;
+
+    h2 {
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
 }
