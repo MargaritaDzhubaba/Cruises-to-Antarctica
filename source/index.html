@@ -44,8 +44,8 @@
         </nav>
       </div>
       <div class="page-header__intro intro">
-        <h1 class="intro__title">Круизы в&nbsp;Антарктику</h1>
-        <p class="intro__text">
+        <h1>Круизы в&nbsp;Антарктику</h1>
+        <p>
           Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов
         </p>
       </div>
@@ -82,11 +82,11 @@
       </section>
 
       <section class="catalog" id="catalog">
-        <h2 class="catalog__title">Ближайшие круизы</h2>
+        <h2>Ближайшие круизы</h2>
         <ul class="catalog__list">
           <li class="catalog__item catalog__item--astoria">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Астория"</h3>
+              <h3>Круиз "Астория"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Аргентина - Фолклендские острова - Антарктида</dd>
@@ -107,7 +107,7 @@
 
           <li class="catalog__item catalog__item--elaine">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Элайн"</h3>
+              <h3>Круиз "Элайн"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Аргентина - Фолклендские острова - Антарктида - Чили</dd>
@@ -128,7 +128,7 @@
 
           <li class="catalog__item catalog__item--atlantis">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Атлантис"</h3>
+              <h3>Круиз "Атлантис"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</dd>
@@ -149,7 +149,7 @@
 
           <li class="catalog__item catalog__item--odysseus">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Одиссей"</h3>
+              <h3>Круиз "Одиссей"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Чили - Антарктида</dd>
@@ -170,7 +170,7 @@
 
           <li class="catalog__item catalog__item--olympia">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Олимпия"</h3>
+              <h3>Круиз "Олимпия"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
@@ -191,7 +191,7 @@
 
           <li class="catalog__item catalog__item--aurora">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Аврора"</h3>
+              <h3>Круиз "Аврора"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Аргентина - Антарктида - Чили</dd>
@@ -212,7 +212,7 @@
 
           <li class="catalog__item catalog__item--leonor">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Леонор"</h3>
+              <h3>Круиз "Леонор"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Чили - Южная Георгия - Антарктида - Аргентина</dd>
@@ -233,7 +233,7 @@
 
           <li class="catalog__item catalog__item--minion">
             <div class="catalog__focus description">
-              <h3 class="description__caption">Круиз "Минион - 1"</h3>
+              <h3>Круиз "Минион - 1"</h3>
               <dl class="description__ditales">
                 <dt>Маршрут</dt>
                 <dd>Аргентина - Антарктида</dd>
@@ -290,7 +290,7 @@
         <div class="contacts__map">
         </div>
         <div class="contacts__container">
-          <p class="contacts__text">
+          <p>
             У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
           </p>
           <a class="contacts__item contacts__item--address" href="https://yandex.ru/maps/-/CCQl6QBjOC">
@@ -306,11 +306,9 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
-            <source media="(max-width: 1023px)" srcset="img/logo-tablet.svg">
-            <img class="logo__image" src="img/logo.svg" width="70" height="38" alt="Логотип сайта туристических круизов в Антарктику">
-          </picture>
+          <svg class="logo__image" width="70" height="38">
+            <use xlink:href="#sprite-icon-logo"></use>
+          </svg>
         </a>
         <div class="page-footer__nav footer-nav">
           <ul class="footer-nav__list">
