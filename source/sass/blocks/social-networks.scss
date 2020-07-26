@@ -4,10 +4,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .social-networks__item {
-  margin-left: 33px;
+  margin-right: 23px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover,
   &:focus {
@@ -19,9 +24,18 @@
   }
 }
 
+.social-networks__item {
+  padding: 5px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
 @media (max-width: $tablet-width-only) {
   .social-networks__item {
-    margin-left: 23px;
+    padding-top: 7px;
+    margin-right: 13px;
   }
 
   .social-networks__icon--fb {
@@ -41,8 +55,12 @@
 }
 
 @media (max-width: $mobile-width-only) {
+  .social-networks__list {
+    justify-content: flex-start;
+  }
+
   .social-networks__item {
-    margin-left: 0;
+    padding-top: 5px;
     margin-right: 23px;
   }
 }

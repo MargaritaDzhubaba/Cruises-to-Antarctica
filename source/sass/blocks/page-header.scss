@@ -14,14 +14,15 @@
 }
 
 .page-header__wrapper {
+  @include wrapper;
+
   position: relative;
 
   display: flex;
   align-items: center;
 
-  @include wrapper;
-
-  padding: 35px 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .page-header__toggle {
@@ -45,16 +46,31 @@
     }
   }
 
+  .page-header__wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header {
+    background-image: url("../img/bg-intro-mobile.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-intro-mobile-2x.jpg");
+    }
+  }
+
   .page-header__toggle {
     position: absolute;
-    top: 35px;
-    right: 45px;
+    top: 20px;
+    right: 15px;
 
     display: block;
     width: 24px;
-    height: 12px;
+    height: 15px;
 
-    background: none;
+    background: url("../img/icon-menu-white.svg") no-repeat center center;
 
     border: none;
     cursor: pointer;
@@ -70,63 +86,6 @@
   }
 
   .page-header__wrapper {
-    padding: 30px 0;
-    margin: 0 auto;
-
-    &--close {
-      .page-header__nav {
-        display: none;
-      }
-
-      .page-header__toggle {
-        right: 0;
-
-        width: 24px;
-        height: 14px;
-
-        background: url("../img/icon-menu-blue.svg") no-repeat center center;
-      }
-    }
-
-    &--no-js {
-      .page-header__toggle {
-        display: none;
-      }
-
-      .page-header__nav {
-        display: flex;
-      }
-    }
-
-    &--open {
-      width: 100%;
-      padding: 30px 45px;
-      background-color: $main-color;
-
-      .page-header__toggle {
-        width: 14px;
-        height: 14px;
-
-        background: url("../img/icon-close-blue.svg") no-repeat center center;
-      }
-
-      .logo__image {
-        fill: $accent-color;
-      }
-    }
-  }
-}
-
-@media (max-width: $mobile-width-only) {
-  .page-header {
-    background-image: url("../img/bg-intro-mobile.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-intro-mobile-2x.jpg");
-    }
-  }
-
-  .page-header__wrapper {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -138,11 +97,6 @@
     &--close {
       .page-header__nav {
         display: none;
-      }
-
-      .page-header__toggle {
-        top: 25px;
-        right: 15px;
       }
     }
 
@@ -167,9 +121,19 @@
     }
 
     &--open {
+      width: 100%;
+      padding: 30px 45px;
+      background-color: $main-color;
+
       .page-header__toggle {
         top: 25px;
         right: 15px;
+
+        background: url("../img/icon-close-blue.svg") no-repeat center center;
+      }
+
+      .logo__image {
+        fill: $accent-color;
       }
     }
   }

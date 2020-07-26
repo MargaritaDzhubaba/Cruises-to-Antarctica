@@ -2,7 +2,7 @@
   background-color: #e2f5fc;
   background-image: url("../img/bg-booking.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -11,12 +11,13 @@
 }
 
 .booking__wrapper {
-  @include wrapper;
-
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
-  padding: 50px 60px;
+  margin: 0 auto;
+  max-width: 1366px;
+  padding: 50px 11.3% 50px 11.4%;
 }
 
 .booking__description {
@@ -24,8 +25,8 @@
   flex-direction: column;
   align-items: flex-start;
 
-  width: 493px;
   padding-top: 163px;
+  padding-right: 15px;
 
   font-size: 18px;
   line-height: 27px;
@@ -49,6 +50,7 @@
 .booking__container {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 
   width: 403px;
   min-height: 455px;
@@ -64,7 +66,7 @@
 
   p {
     margin: 0;
-    margin-bottom: 26px;
+    margin-bottom: 27px;
   }
 }
 
@@ -81,11 +83,11 @@
     flex-direction: column;
     align-items: center;
 
-    padding: 88px 0 100px;
+    padding: 88px 45px 100px;
   }
 
   .booking__description {
-    width: 419px;
+    padding-right: 0;
 
     align-items: center;
 
@@ -100,6 +102,7 @@
     }
 
     p {
+      width: 419px;
       text-align: center;
     }
   }
@@ -119,7 +122,7 @@
   }
 
   .booking__wrapper {
-    padding: 60px 0 65px;
+    padding: 60px 15px 65px;
   }
 
   .booking__description {
@@ -150,7 +153,7 @@
     text-align: center;
 
     p {
-      margin-bottom: 27px;
+      margin-bottom: 28px;
     }
   }
 }

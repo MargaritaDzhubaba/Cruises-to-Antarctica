@@ -31,45 +31,6 @@
 }
 
 @media (max-width: $tablet-width-only) {
-  .main-nav {
-    &--js {
-      position: absolute;
-      top: 80px;
-      right: 0;
-      z-index: 5;
-
-      width: 100%;
-      height: auto;
-
-      background-color: $main-color;
-
-      .main-nav__list {
-        display: flex;
-        flex-direction: column;
-        padding: 0 45px 20px;
-      }
-
-      .main-nav__item {
-        display: block;
-        margin: 0;
-        padding: 15px;
-        padding-left: 0;
-        text-align: left;
-
-        font-size: 20px;
-        line-height: 28px;
-        font-weight: 500;
-        color: $accent-color;
-
-        background-color: $main-color;
-      }
-
-      .page-header__image {
-        fill: $accent-color;
-      }
-    }
-  }
-
   .main-nav__item {
     margin-left: 24px;
 
@@ -81,7 +42,15 @@
 @media (max-width: $mobile-width-only) {
   .main-nav {
     &--js {
+      position: absolute;
       top: 62px;
+      right: 0;
+      z-index: 5;
+
+      width: 100%;
+      height: auto;
+
+      background-color: $main-color;
 
       .main-nav__list {
         display: flex;

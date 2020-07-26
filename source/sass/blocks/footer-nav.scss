@@ -9,10 +9,18 @@
   line-height: 20px;
   font-style: normal;
   font-weight: 500;
+
+  li {
+    margin-right: 23px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .footer-nav__item {
-  margin-right: 33px;
+  padding: 5px;
 
   color: $main-color;
 
@@ -30,10 +38,10 @@
   .footer-nav__list {
     font-size: 12px;
     line-height: 15px;
-  }
 
-  .footer-nav__item {
-    margin-right: 23px;
+    li {
+      margin-right: 14px;
+    }
   }
 }
 
@@ -46,12 +54,12 @@
       margin-bottom: 17px;
 
       &:last-of-type {
-        margin-bottom: 19px;
+        margin-bottom: 14px;
       }
     }
   }
 
   .footer-nav__item {
-    margin: 0;
+    padding-left: 0;
   }
 }

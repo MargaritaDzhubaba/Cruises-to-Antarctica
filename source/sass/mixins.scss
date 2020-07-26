@@ -7,16 +7,21 @@
 
 @mixin wrapper {
   margin: 0 auto;
+  max-width: 1366px;
 
   @media (min-width: $mobile-width) {
-    width: $mobile-width;
+    width: 100%;
   }
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
+    width: 100%;
+    padding-left: 5.86%; //45px
+    padding-right: 5.86%;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    width: 100%;
+    padding-left: 7.2%; //103px
+    padding-right: 7.1%;
   }
 }

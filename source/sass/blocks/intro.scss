@@ -1,5 +1,5 @@
 .intro {
-  padding: 162px 95px 278px;
+  padding: 162px 198px 278px;
 
   font-weight: normal;
   font-size: 20px;
@@ -23,7 +23,7 @@
 
 @media (max-width: $tablet-width-only) {
   .intro {
-    padding: 187px 0 275px;
+    padding: 188px 45px 275px;
 
     font-size: 18px;
     line-height: 22px;
@@ -37,7 +37,7 @@
 
 @media (max-width: $mobile-width-only) {
   .intro {
-    padding: 113px 0 178px;
+    padding: 114px 15px 178px;
 
     font-size: 16px;
     line-height: 22px;
