@@ -9,9 +9,11 @@
 
 .social-networks__item {
   margin-right: 23px;
+  padding: 5px;
 
   &:last-child {
     margin-right: 0;
+    padding-right: 0;
   }
 
   &:hover,
@@ -21,14 +23,6 @@
 
   &:active {
     opacity: 0.5;
-  }
-}
-
-.social-networks__item {
-  padding: 5px;
-
-  &:last-child {
-    padding-right: 0;
   }
 }
 
