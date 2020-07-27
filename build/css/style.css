@@ -206,7 +206,7 @@ input[type="radio"].visually-hidden {
         fill: #011c40; }
     .page-header__wrapper--open {
       width: 100%;
-      padding: 30px 45px;
+      padding: 20px 15px;
       background-color: #f9fbfd; }
       .page-header__wrapper--open .page-header__toggle {
         top: 25px;
@@ -310,7 +310,7 @@ input[type="radio"].visually-hidden {
               flex-direction: column;
       padding: 0 15px 10px; }
     .main-nav--js .main-nav__item {
-      padding: 15px;
+      padding: 0;
       font-size: 18px;
       line-height: 22px; }
     .main-nav--js .page-header__image {
@@ -1133,7 +1133,7 @@ input[type="radio"].visually-hidden {
       font-size: 24px;
       line-height: 31px; }
     .booking__description p {
-      width: 100%; }
+      width: 90%; }
   .booking__container {
     width: 100%;
     padding: 35px 30px 40px;
@@ -1211,7 +1211,15 @@ input[type="radio"].visually-hidden {
 .form__wrapper--checkbox {
   margin-top: 22px; }
 
-.form__wrapper--checkbox label {
+.form__button {
+  width: 100%;
+  padding: 11px 15px; }
+
+@media (max-width: 767px) {
+  .form__wrapper--checkbox {
+    margin-top: 17px; } }
+
+.check__label {
   position: relative;
   display: block;
   padding-left: 23px;
@@ -1221,20 +1229,7 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
   cursor: pointer; }
 
-.form__button {
-  width: 100%;
-  padding: 11px 15px; }
-
-@media (max-width: 767px) {
-  .form__wrapper--checkbox {
-    margin-top: 17px; }
-    .form__wrapper--checkbox label {
-      min-width: 190px;
-      padding-left: 28px;
-      margin-bottom: 27px;
-      text-align: left; } }
-
-.check__input + .check-label::before {
+.check__input + .check__label::before {
   position: absolute;
   content: "";
   top: -2px;
@@ -1243,7 +1238,7 @@ input[type="radio"].visually-hidden {
   height: 18px;
   background-color: #f9fbfd; }
 
-.check__input:checked + .check-label::after {
+.check__input:checked + .check__label::after {
   position: absolute;
   content: "";
   top: 3px;
@@ -1268,14 +1263,19 @@ input[type="radio"].visually-hidden {
   opacity: 0.3; }
 
 @media (max-width: 767px) {
+  .check__label {
+    width: 190px;
+    padding-left: 28px;
+    margin-bottom: 27px;
+    text-align: left; }
   .check__input + .check__label::before {
     top: 3px;
     left: 0;
     width: 20px;
     height: 20px; }
   .check__input:checked + .check__label::after {
-    top: 7px;
-    left: 5px;
+    top: 9px;
+    left: 4px;
     width: 12px;
     height: 8px; } }
 
@@ -1619,5 +1619,6 @@ input[type="radio"].visually-hidden {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .social-networks__item {
-    padding-top: 5px;
-    margin-right: 23px; } }
+    padding-top: 0;
+    padding-left: 0;
+    margin-right: 18px; } }
