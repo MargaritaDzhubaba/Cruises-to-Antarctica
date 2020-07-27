@@ -8,7 +8,7 @@
   align-items: center;
 
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 119px;
 
   font-size: 16px;
   line-height: 24px;
@@ -18,8 +18,8 @@
 }
 
 .promo__container {
-  width: 46%;
-  padding-right: 15px;
+  width: 50%;
+  padding-right: 50px;
 
   h2 {
     margin: 0;
@@ -37,14 +37,15 @@
 }
 
 .promo__image {
-  width: 556px;
-  height: 301px;
+  width: calc(50% - 24px);
+  max-width: 556px;
+  padding-bottom: 26%;
 
   background-color: $main-color;
   background-image: url("../img/penguins.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
+  background-position: center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/penguins-2x.jpg");
@@ -59,6 +60,7 @@
 
   .promo__container {
     width: 50%;
+    padding-right: 15px;
 
     h2 {
       margin-bottom: 16px;
@@ -69,8 +71,9 @@
   }
 
   .promo__image {
-    width: 324px;
-    height: 264px;
+    max-width: 324px;
+    width: calc(50% - 15px);
+    padding-bottom: 39%;
 
     background-image: url("../img/penguins-tablet.jpg");
 
@@ -101,14 +104,15 @@
   }
 
   .promo__image {
-    width: 290px;
-    height: 186px;
+    max-width: 450px;
+    width: 100%;
+    padding-bottom: 64%;
 
     background-image: url("../img/penguins-mobile.jpg");
     background-color: $main-color;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/penguins-mobile-2x.jpg");

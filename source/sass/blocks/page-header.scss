@@ -61,6 +61,11 @@
     }
   }
 
+  .page-header__intro {
+    max-width: 450px;
+    width: 100%;
+  }
+
   .page-header__toggle {
     position: absolute;
     top: 20px;

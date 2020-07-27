@@ -52,3 +52,13 @@
     padding: 29px 35px 35px;
   }
 }
+
+@media (max-width: $mobile-width-only) {
+  .description {
+    padding: 29px 25px 35px;
+  }
+
+  .description__ditales {
+    margin-bottom: 25px;
+  }
+}
