@@ -20,7 +20,13 @@
 
   color: $accent-color;
   border: none;
-  border-radius: none;
+
+  &[type="text"],
+  &[type="email"],
+  &[type="tel"] {
+    -webkit-border-radius:0px;
+    border-radius: none;
+  }
 
   &:last-of-type {
     margin-bottom: 0;
