@@ -20,18 +20,22 @@
   margin: 0;
   text-align: left;
 
-  overflow: auto;
-
   dt {
     margin: 0;
     margin-bottom: 1px;
 
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 500;
   }
 
   dd {
     margin: 0;
     margin-bottom: 11px;
+
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -40,7 +44,6 @@
 }
 
 .description__button {
-  align-self: center;
   margin-top: auto;
 
   width: 100%;

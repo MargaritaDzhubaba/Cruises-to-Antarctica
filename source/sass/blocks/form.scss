@@ -9,16 +9,18 @@
 
 .form__wrapper input {
   width: 100%;
+  height: 43px;
 
-  padding: 11px 15px 11px;
+  padding: 12px 15px 13px;
   margin-bottom: 20px;
 
   font-family: $font-deafult;
   font-size: 14px;
-  line-height: 21px;
+  // line-height: 21px;
 
   color: $accent-color;
   border: none;
+  border-radius: none;
 
   &:last-of-type {
     margin-bottom: 0;

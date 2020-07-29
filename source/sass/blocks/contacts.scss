@@ -49,11 +49,11 @@
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
+}
 
-  p {
-    margin: 0;
-    margin-bottom: 32px;
-  }
+.contacts__title {
+  margin: 0;
+  margin-bottom: 31px;
 }
 
 .contacts__item {
@@ -62,6 +62,7 @@
   display: flex;
   align-items: center;
 
+  margin: 0;
   margin-bottom: 21px;
   padding-left: 28px;
 
@@ -87,6 +88,15 @@
   }
 
   &--phone {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
     &::after {
       content: "";
 
@@ -130,10 +140,10 @@
     width: 324px;
 
     padding-top: 66px;
+  }
 
-    p {
-      margin-bottom: 27px;
-    }
+  .contacts__title {
+    margin-bottom: 27px;
   }
 
   .contacts__item {
