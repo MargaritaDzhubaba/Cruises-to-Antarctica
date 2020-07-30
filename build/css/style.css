@@ -1006,9 +1006,9 @@ input[type="radio"].visually-hidden {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   color: #011c40;
-  border: none; }
-  .form__wrapper input[type="text"], .form__wrapper input[type="email"], .form__wrapper input[type="tel"] {
-    border-radius: none; }
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0px; }
   .form__wrapper input:last-of-type {
     margin-bottom: 0; }
   .form__wrapper input::-webkit-input-placeholder {
