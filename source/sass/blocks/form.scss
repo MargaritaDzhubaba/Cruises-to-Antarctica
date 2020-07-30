@@ -21,12 +21,8 @@
   color: $accent-color;
   border: none;
 
-  &[type="text"],
-  &[type="email"],
-  &[type="tel"] {
-    -webkit-border-radius:0px;
-    border-radius: none;
-  }
+  border-radius: 0;
+  -webkit-border-radius:0px;
 
   &:last-of-type {
     margin-bottom: 0;
